@@ -4,7 +4,7 @@
 #include <fstream>
 #include <sstream> 
 
-void PartOneSingleLineAgrigator(const char direction, const int units, int& x, int& z)
+void PartOneSingleLineAggregator(const char direction, const int units, int& x, int& z)
 {
     if(direction == 'f')
     {
@@ -20,7 +20,7 @@ void PartOneSingleLineAgrigator(const char direction, const int units, int& x, i
     }
 }
 
-void PartTwoSingleLineAgrigator(const char direction, const int units, int& x, int& z, int& aim)
+void PartTwoSingleLineAggregator(const char direction, const int units, int& x, int& z, int& aim)
 {
     if(direction == 'f')
     {
@@ -56,8 +56,8 @@ int main()
         const char direction = directionPair.front();
         const int units = std::stoi(&directionPair.back());
 
-        PartOneSingleLineAgrigator(direction, units, partOneX, partOneZ);
-        PartTwoSingleLineAgrigator(direction, units, partTwoX, partTwoZ, aim);
+        PartOneSingleLineAggregator(direction, units, partOneX, partOneZ);
+        PartTwoSingleLineAggregator(direction, units, partTwoX, partTwoZ, aim);
     }
 
     std::cout << "Part 1: " << partOneX << " , " << partOneZ << " : " << partOneX*partOneZ << "\n";
